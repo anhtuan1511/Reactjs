@@ -39,6 +39,10 @@ function App() {
         {name} dep trai
       </div>
       <button onClick={handleClick}>Click me</button>
+      <div>
+        BCD
+      </div>
+      
     </>
   )
 }
