@@ -3,6 +3,11 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import "./Style.css";
+import Welocme from "./components/welcom";
+import Title from "./components/title";
+import Cart from "./components/cart";
+import Products from "./components/Products";
+
 
 function App() {
   return (
@@ -40,6 +45,25 @@ function App() {
           Lorem ipsum, dolor sit amet consectetur adipisicing elit.{" "}
         </p>
       </div>
+      <Title Children="Flash sale"/>
+      <div className="grid grid-cols-4 gap-10 mt-10">
+        {/* -------------------------item------------------------ */}
+        
+        {Array.from({length :4}).map((_, index)=>(
+          <div className="border border-gray-400 rounded-xl p-3 " key={index}>
+          <div>
+            <img src="anh-dep-hinh-nen-thien-nhien-2.jpg" alt="" />
+          </div>
+          <h3>Travel</h3>
+          <p>9999999</p>
+        </div>
+        ))}
+       
+      </div>
+
+
+
+      <Title Children='San pham'/>
       <div className="grid grid-cols-4 gap-10 mt-10">
         {/* -------------------------item------------------------ */}
         
@@ -57,8 +81,15 @@ function App() {
       <div className="bg-black p-9 mt-8">
         <h5 className="text-white text-center">copyright@</h5>
       </div>
+    <Welocme data ='hello'/>
+    
+    <Cart/>
+    <Products ></Products>
+
+      
     </>
   );
 }
 
 export default App;
+
